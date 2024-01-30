@@ -19,16 +19,6 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-
-  --primary-teal: #00A39A;
-  --light-green: #BBF5D2;
-  --dark-grayish-blue: #263A43;
-  --medium-gray: #767676;
-  --light-gray: #C1C0C0;
-  --orange-yellow: #E19E1A;
-  --yellow: #FBBC05;
-  --violet: #5243C2;
-  --pinkish-purple: #9747FF;
 }
 
 /* semantic color variables for this project */
