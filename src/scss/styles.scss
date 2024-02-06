@@ -43,13 +43,60 @@ $yellow: #fbbc05;
 $violet: #5243c2;
 $pinkish-purple: #9747ff;
 
+$custom-colors: (
+  primary-teal: $primary-teal,
+  light-green: $light-green,
+  dark-grayish-blue: $dark-grayish-blue,
+  medium-gray: $medium-gray,
+  light-gray: $light-gray,
+  orange-yellow: $orange-yellow,
+  yellow: $yellow,
+  violet: $violet,
+  pinkish-purple: $pinkish-purple
+);
+
+// Generate classes for each variable (text and background)
+@each $color-name, $color-value in $custom-colors {
+  $text-class-name: "text-#{$color-name}";
+  $bg-class-name: "bg-#{$color-name}";
+
+  .#{$text-class-name} {
+    color: $color-value !important;
+  }
+
+  .#{$bg-class-name} {
+    background-color: $color-value !important;
+  }
+}
+
 // Customize some defaults
 $font-family-base: Poppins, sans-serif, system-ui;
 $primary: $primary-teal;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+$h7-font-size:                $font-size-base * 0.75 !default;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $h7-font-size
+);
 $body-color: #333;
 $body-bg: #fff;
 $border-radius: 0.4rem;
 $success: #7952b3;
+$nav-pills-link-active-color:       $primary-teal;
+$nav-pills-link-active-bg:          #00A39A33;
 
 // Required
 @import 'bootstrap/scss/variables';
@@ -70,9 +117,9 @@ $success: #7952b3;
 @import 'bootstrap/scss/transitions';
 @import 'bootstrap/scss/dropdown';
 // @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
-// @import "bootstrap/scss/card";
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar'; // Requires nav
+@import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/pagination";

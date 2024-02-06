@@ -1,14 +1,16 @@
 <template>
-  Dashboard
-  <button class="btn btn-primary">
-    <box-icon color="white" name="rocket"></box-icon>
-    Submit
-  </button>
+  <div class="container-fluid">
+    <div class="row">
+      <SidebarComponent />
+    </div>
+  </div>
 </template>
 
 <script>
+import SidebarComponent from '@/components/SidebarComponent.vue'
+
 export default {
   name: 'DashboardView',
-  components: {}
+  components: { SidebarComponent }
 }
 </script>
