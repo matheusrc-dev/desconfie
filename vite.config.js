@@ -12,8 +12,15 @@ export default defineConfig({
           isCustomElement: (tag) => ['box-icon'].includes(tag)
         }
       }
-    }),
+    })
   ],
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: `@import "@/assets/scss/global.scss";`
+  //     }
+  //   }
+  // },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

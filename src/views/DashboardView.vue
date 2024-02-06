@@ -2,15 +2,17 @@
   <div class="container-fluid">
     <div class="row">
       <SidebarComponent />
+      <MainComponent />
     </div>
   </div>
 </template>
 
 <script>
-import SidebarComponent from '@/components/SidebarComponent.vue'
+import MainComponent from '@/components/dashboard/MainComponent.vue';
+import SidebarComponent from '@/components/dashboard/SidebarComponent.vue'
 
 export default {
   name: 'DashboardView',
-  components: { SidebarComponent }
+  components: { SidebarComponent, MainComponent }
 }
 </script>

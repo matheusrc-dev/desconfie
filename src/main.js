@@ -4,7 +4,7 @@ import router from './router';
 import store from './store';
 
 import 'boxicons';
-import '@/scss/styles.scss';
+import '@/assets/scss/styles.scss';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const app = createApp(App);

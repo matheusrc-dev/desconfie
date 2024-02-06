@@ -42,6 +42,7 @@ $orange-yellow: #e19e1a;
 $yellow: #fbbc05;
 $violet: #5243c2;
 $pinkish-purple: #9747ff;
+$midnight-ink: #373753;
 
 $custom-colors: (
   primary-teal: $primary-teal,
@@ -52,7 +53,8 @@ $custom-colors: (
   orange-yellow: $orange-yellow,
   yellow: $yellow,
   violet: $violet,
-  pinkish-purple: $pinkish-purple
+  pinkish-purple: $pinkish-purple,
+  midnight-ink: $midnight-ink
 );
 
 // Generate classes for each variable (text and background)
@@ -97,6 +99,8 @@ $border-radius: 0.4rem;
 $success: #7952b3;
 $nav-pills-link-active-color:       $primary-teal;
 $nav-pills-link-active-bg:          #00A39A33;
+$headings-color: $midnight-ink;
+
 
 // Required
 @import 'bootstrap/scss/variables';
@@ -138,7 +142,7 @@ $nav-pills-link-active-bg:          #00A39A33;
 // @import "bootstrap/scss/placeholders";
 
 // Helpers
-// @import "bootstrap/scss/helpers";
+@import "bootstrap/scss/helpers";
 
 // Utilities
 @import 'bootstrap/scss/utilities/api';
@@ -149,4 +153,8 @@ $nav-pills-link-active-bg:          #00A39A33;
 
 .btn-primary {
   color: $white;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
