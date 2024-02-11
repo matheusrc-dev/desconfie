@@ -1,9 +1,17 @@
 <template>
   <main class="col-10 px-4">
     <h4 class="my-3">Finalize seu cadastro</h4>
-    <steps-component />
+    <div class="row">
+      <steps-component
+        v-for="(step, index) in registerSteps"
+        :key="index"
+        :step="index + 1"
+        :title="step.title"
+        :status="step.status"
+      />
+    </div>
 
-    <hr />
+    <hr class="border border-primary" style="opacity: 0.14 !important;"/>
 
     <!-- <div class="row">
       <div class="col-4">
@@ -49,10 +57,28 @@
 </template>
 
 <script>
-import StepsComponent from './StepsComponent.vue';
+import StepsComponent from './StepsComponent.vue'
 
 export default {
-    name: 'MainComponent',
-    components: { StepsComponent }
+  name: 'MainComponent',
+  components: { StepsComponent },
+  data() {
+    return {
+      registerSteps: [
+        {
+          title: 'Dados da empresa',
+          status: 'done'
+        },
+        {
+          title: 'Lista de contatos',
+          status: 'current'
+        },
+        {
+          title: 'Testes em andamento',
+          status: 'blocked'
+        }
+      ]
+    }
+  }
 }
 </script>
